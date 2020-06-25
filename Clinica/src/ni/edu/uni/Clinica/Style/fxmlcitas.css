@@ -1,0 +1,22 @@
+AnchorDisingStyle{
+	-fx-background-color: linear-gradient (to bottom left, #2196F3,#374254);
+}
+
+.button1GestionEmpleadoStyle{
+	-fx-background-fills: #fff;
+	-fx-background-color: #CFD9E0;
+	-fx-background-radius: 30 30 30 30;
+	-fx-border-radius: 30 30 30 30;
+}
+
+.button1GestionEmpleadoStyle:hover{
+	-fx-background-color: #FFFFFF;
+	-fx-border-color:  #C8D2D9;
+}
+.button1GestionEmpleadoStyle:pressed{
+	-fx-background-color: #FFFFFF;
+	-fx-background-color:  #C8D2D9;
+}
+.txtFiledSearch{
+	-fx-background-fills: #fff;
+}

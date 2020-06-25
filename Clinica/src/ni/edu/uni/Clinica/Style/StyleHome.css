@@ -1,0 +1,41 @@
+
+.Hbox1{
+	-fx-background-color: #377EBA;
+	-fx-background-radius: 1em;
+	-fx-border-radius: 1em;
+}
+
+.Hbox1:hover{
+	-fx-border-color: #377EBA;
+}
+
+
+.Hbox2{
+	-fx-background-color: #E59D00;
+	-fx-background-radius: 1em;
+	-fx-border-radius: 1em;
+}
+
+.Hbox2:hover{
+	-fx-border-color: #E59D00;
+}
+
+.Hbox3{
+	-fx-background-color: #58AC57;
+	-fx-background-radius: 1em;
+	-fx-border-radius: 1em;
+}
+
+.Hbox3:hover{
+	-fx-border-color: #58AC57;
+}
+
+.Hbox4{
+	-fx-background-color: #CD4F4A;
+	-fx-background-radius: 1em;
+	-fx-border-radius: 1em;
+}
+
+.Hbox4:hover{
+	-fx-border-color: #CD4F4A;
+}

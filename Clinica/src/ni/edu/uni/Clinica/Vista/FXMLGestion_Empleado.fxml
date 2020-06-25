@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXScrollPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox fx:id="content_area" prefHeight="792.0" prefWidth="1338.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ni.edu.uni.Clinica.Controller.GestionEmpleado">
+   <children>
+      <HBox prefHeight="0.0" prefWidth="1338.0" style="-fx-background-color: #fff;" VBox.vgrow="NEVER">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="55.0" prefWidth="232.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <ImageView fitHeight="57.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/Icono%20Gestion%20Empleado.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="10.0" right="5.0" top="2.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Line endX="-99.79289245605469" endY="56.29289245605469" startX="-99.58578491210938" startY="5.351777076721191" />
+                  <Label text="Gestion Empleado">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="3.0" right="10.0" top="12.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="78.0" prefWidth="470.0">
+               <children>
+                  <ImageView fitHeight="33.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/search%20(2).png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <JFXTextField fx:id="txt_Busqueda" focusColor="#134eff" labelFloat="true" prefHeight="31.0" prefWidth="276.0" promptText="Busqueda Empleado" unFocusColor="#2a2e37" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </HBox>
+         </children>
+      </HBox>
+      <HBox prefHeight="78.0" prefWidth="1338.0" spacing="50.0" style="-fx-background-color: #2A2E37;" VBox.vgrow="SOMETIMES">
+         <children>
+            <VBox alignment="CENTER" prefHeight="82.0" prefWidth="420.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-radius: 30 30 30 30;" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Label layoutX="31.0" layoutY="52.0" prefHeight="27.0" prefWidth="266.0" text="Total de Empleados Registrados" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="47.0" layoutY="14.0" text="22000" textFill="WHITE">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                        <Circle fill="#ff1f1f" layoutX="31.0" layoutY="33.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Pane>
+               </children>
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin>
+            </VBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="80.0" prefWidth="471.0" spacing="10.0" style="-fx-background-radius: 30 30 30 30;" HBox.hgrow="SOMETIMES">
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+               <children>
+                  <Button fx:id="btn_Add" mnemonicParsing="false" onAction="#OnActionBtnAdd" prefHeight="50.0" prefWidth="177.0" styleClass="button1GestionEmpleadoStyle" stylesheets="@../Style/fxmlcitas.css" text="Agregar">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icons/add%20(1).png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <tooltip>
+                        <Tooltip text="Ingrese un Nuevo Empleado">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="btn_Edit" mnemonicParsing="false" onAction="#OnActionBtnEdit" prefHeight="50.0" prefWidth="177.0" styleClass="button1GestionEmpleadoStyle" stylesheets="@../Style/fxmlcitas.css" text="Editar">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icons/Editar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <tooltip>
+                        <Tooltip text="Editar un Empleado">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="btn_DeleteEmpleado1" mnemonicParsing="false" onAction="#OnActionBtnDelete" prefHeight="50.0" prefWidth="177.0" styleClass="button1GestionEmpleadoStyle" stylesheets="@../Style/fxmlcitas.css" text="Eliminar">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icons/delete.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <tooltip>
+                        <Tooltip text="Eliminar un Registro">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="btn_ClearTxt1" mnemonicParsing="false" onAction="#OnActionBtnClear" prefHeight="50.0" prefWidth="177.0" styleClass="button1GestionEmpleadoStyle" stylesheets="@../Style/fxmlcitas.css" text="Limpiar">
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icons/clear.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <tooltip>
+                        <Tooltip text="Limpia todos los campos de Texto">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <HBox prefHeight="456.0" prefWidth="1169.0" VBox.vgrow="ALWAYS">
+         <children>
+            <SplitPane dividerPositions="0.6627737226277373" prefHeight="493.0" prefWidth="452.0" style="-fx-background-color: #fff;" HBox.hgrow="ALWAYS">
+               <items>
+                  <GridPane style="-fx-background-color: #fff;">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <JFXTreeTableView fx:id="tbl_DatosEmpleado" />
+                     </children>
+                  </GridPane>
+                  <JFXScrollPane stylesheets="@../Style/StyleScrollPane.css">
+                     <children>
+                        <VBox fx:id="VboxDataGestionEmpleado" alignment="TOP_CENTER" prefHeight="659.0" prefWidth="514.0" style="-fx-border-color: #000000; -fx-border-width: 3; -fx-background-color: #fff;">
+                           <children>
+                              <ImageView fx:id="img_ImageUsuario" fitHeight="126.0" fitWidth="119.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="NEVER">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <effect>
+                                    <Blend />
+                                 </effect>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                                 <image>
+                                    <Image url="@../Icons/Usuario.png" />
+                                 </image>
+                              </ImageView>
+                              <JFXButton fx:id="btn_AddImageEmpleado" onAction="#AgregarFoto_btnAddImageEmpleado" style="-fx-background-color: #2D75E8;" text="Agregar Imagen" textFill="WHITE" VBox.vgrow="ALWAYS" />
+                              <HBox alignment="CENTER_LEFT" prefHeight="66.0" prefWidth="413.0" spacing="4.0" VBox.vgrow="NEVER">
+                                 <children>
+                                    <VBox prefHeight="66.0" prefWidth="89.0" HBox.hgrow="NEVER">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ID:">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Text>
+                                          <JFXTextField focusColor="#0084ff" prefHeight="29.0" prefWidth="92.0" promptText="000000" unFocusColor="BLACK" VBox.vgrow="ALWAYS">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets right="9.0" />
+                                             </VBox.margin>
+                                          </JFXTextField>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="66.0" prefWidth="157.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre:">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Text>
+                                          <JFXTextField focusColor="#0084ff" prefHeight="29.0" prefWidth="100.0" promptText="Omar Josue" unFocusColor="BLACK" VBox.vgrow="ALWAYS">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets right="9.0" />
+                                             </VBox.margin>
+                                          </JFXTextField>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="66.0" prefWidth="153.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Apellido:">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Text>
+                                          <JFXTextField focusColor="#0084ff" prefHeight="31.0" prefWidth="133.0" promptText="Sandoval Maldonado" unFocusColor="BLACK" VBox.vgrow="ALWAYS">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets right="9.0" />
+                                             </VBox.margin>
+                                          </JFXTextField>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="25.0" left="15.0" right="15.0" top="40.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="66.0" prefWidth="413.0" spacing="4.0" VBox.vgrow="NEVER">
+                                 <children>
+                                    <VBox prefHeight="66.0" prefWidth="105.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Telefono:">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Text>
+                                          <JFXTextField focusColor="#0084ff" prefHeight="31.0" prefWidth="133.0" promptText="000-0000-0000" unFocusColor="BLACK" VBox.vgrow="ALWAYS">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets right="9.0" />
+                                             </VBox.margin>
+                                          </JFXTextField>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="66.0" prefWidth="146.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Salario:">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Text>
+                                          <JFXTextField focusColor="#0084ff" prefHeight="29.0" prefWidth="100.0" promptText="000000000" unFocusColor="BLACK" VBox.vgrow="ALWAYS">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets right="9.0" />
+                                             </VBox.margin>
+                                          </JFXTextField>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="66.0" prefWidth="159.0" HBox.hgrow="NEVER">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Direccion:">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Text>
+                                          <JFXTextField focusColor="#0084ff" prefHeight="29.0" prefWidth="110.0" promptText="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" unFocusColor="BLACK">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets right="9.0" />
+                                             </VBox.margin>
+                                          </JFXTextField>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="25.0" left="15.0" right="15.0" top="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="206.0" prefWidth="344.0" spacing="4.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <VBox prefHeight="236.0" prefWidth="115.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Especialidad:">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Text>
+                                          <JFXTextField fx:id="txt_Especialidad" focusColor="#0084ff" prefHeight="31.0" prefWidth="105.0" promptText="Cardeologo" unFocusColor="BLACK" VBox.vgrow="ALWAYS">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets right="9.0" />
+                                             </VBox.margin>
+                                          </JFXTextField>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="206.0" prefWidth="205.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Correo:">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Text>
+                                          <JFXTextField fx:id="txt_Correo" focusColor="#0084ff" prefHeight="31.0" prefWidth="144.0" promptText="OmarSandoval123@gmail.com" unFocusColor="BLACK" VBox.vgrow="ALWAYS">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets right="9.0" />
+                                             </VBox.margin>
+                                          </JFXTextField>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox prefHeight="206.0" prefWidth="205.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Cedula:">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Text>
+                                          <JFXTextField fx:id="txt_Cedula" focusColor="#0084ff" prefHeight="29.0" prefWidth="110.0" promptText="000-0000000-00000M" unFocusColor="BLACK" VBox.vgrow="ALWAYS">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets right="9.0" />
+                                             </VBox.margin>
+                                          </JFXTextField>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="15.0" right="15.0" top="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="206.0" prefWidth="344.0" spacing="4.0">
+                                 <children>
+                                    <VBox prefHeight="236.0" prefWidth="115.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Cargo">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Text>
+                                          <JFXComboBox focusColor="#183eb2" prefHeight="25.0" prefWidth="312.0" promptText="Seleccione Un Campo" unFocusColor="BLACK" visibleRowCount="20" VBox.vgrow="ALWAYS" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </JFXScrollPane>
+               </items>
+            </SplitPane>
+         </children>
+      </HBox>
+   </children>
+</VBox>

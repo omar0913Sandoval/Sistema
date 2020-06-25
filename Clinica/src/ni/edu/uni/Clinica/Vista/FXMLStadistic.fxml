@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.chart.StackedBarChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox fx:id="content_area" prefHeight="792.0" prefWidth="1338.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ni.edu.uni.Clinica.Controller.FXMLStadisticController">
+   <children>
+      <HBox prefHeight="59.0" prefWidth="1338.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="59.0" prefWidth="247.0" style="-fx-background-color: #112233;">
+               <children>
+                  <ImageView fitHeight="36.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/result%20(1).png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="14.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label prefHeight="38.0" prefWidth="131.0" text="Stadisticas" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+         <VBox.margin>
+            <Insets bottom="20.0" />
+         </VBox.margin>
+      </HBox>
+      <BorderPane prefHeight="104.0" prefWidth="1338.0">
+         <center>
+            <GridPane hgap="15.0" prefHeight="103.0" prefWidth="869.0" BorderPane.alignment="CENTER">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Pane prefHeight="103.0" prefWidth="200.0" style="-fx-background-color: #3A84C3; -fx-background-radius: 1em;">
+                     <children>
+                        <Text fx:id="lblNumeroDePacientes1" fill="WHITE" layoutX="94.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="500">
+                           <font>
+                              <Font name="System Bold" size="36.0" />
+                           </font>
+                        </Text>
+                        <Text fill="WHITE" layoutX="94.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Medicos">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Text>
+                        <ImageView fitHeight="62.0" fitWidth="63.0" layoutX="14.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icons/Pacientes.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </Pane>
+                  <Pane prefHeight="103.0" prefWidth="200.0" style="-fx-background-color: #112233; -fx-background-radius: 1em;" GridPane.columnIndex="1">
+                     <children>
+                        <Text fx:id="lblNumeroPacientesAtendidos1" fill="WHITE" layoutX="94.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100">
+                           <font>
+                              <Font name="System Bold" size="36.0" />
+                           </font>
+                        </Text>
+                        <Text fill="WHITE" layoutX="94.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Ingreso">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Text>
+                        <ImageView fitHeight="51.0" fitWidth="53.0" layoutX="-5.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" x="26.0" y="23.0">
+                           <image>
+                              <Image url="@../Icons/accounting.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="103.0" prefWidth="200.0" style="-fx-background-color: #5CB55B; -fx-background-radius: 1em;" GridPane.columnIndex="2">
+                     <children>
+                        <Text fx:id="lblNumeroPacientesAtendidos21" fill="WHITE" layoutX="94.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100">
+                           <font>
+                              <Font name="System Bold" size="36.0" />
+                           </font>
+                        </Text>
+                        <Text fill="WHITE" layoutX="94.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pacientes">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Text>
+                        <ImageView fitHeight="62.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true" x="26.0" y="23.0">
+                           <image>
+                              <Image url="@../Icons/UsuarioHome.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="103.0" prefWidth="200.0" style="-fx-background-color: #D7534E; -fx-background-radius: 1em;" GridPane.columnIndex="3">
+                     <children>
+                        <Text fx:id="lblNumeroPacientesAtendidos11" fill="WHITE" layoutX="94.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100">
+                           <font>
+                              <Font name="System Bold" size="36.0" />
+                           </font>
+                        </Text>
+                        <Text fill="WHITE" layoutX="94.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Administracion" wrappingWidth="137.26611328125">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Text>
+                        <ImageView fitHeight="62.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true" x="26.0" y="23.0">
+                           <image>
+                              <Image url="@../Icons/money.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <GridPane.margin>
+                        <Insets right="20.0" />
+                     </GridPane.margin>
+                  </Pane>
+               </children>
+            </GridPane>
+         </center>
+      </BorderPane>
+      <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <PieChart fx:id="GraficoDePastel" VBox.vgrow="ALWAYS" />
+                  <StackedBarChart fx:id="BarChart" VBox.vgrow="ALWAYS">
+                    <xAxis>
+                      <CategoryAxis fx:id="XBarchart" side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis fx:id="yBarchart" side="LEFT" />
+                    </yAxis>
+                  </StackedBarChart>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <LineChart fx:id="LineChart" VBox.vgrow="ALWAYS">
+                    <xAxis>
+                      <CategoryAxis fx:id="XLineChart" side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis fx:id="yLineChart" side="LEFT" />
+                    </yAxis>
+                  </LineChart>
+                  <AreaChart fx:id="AreaChart" VBox.vgrow="ALWAYS">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" fx:id="xAreaChart" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis fx:id="yAreaChart" side="LEFT" />
+                    </yAxis>
+                  </AreaChart>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

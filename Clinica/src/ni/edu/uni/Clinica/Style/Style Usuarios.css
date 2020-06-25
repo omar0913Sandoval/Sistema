@@ -1,0 +1,23 @@
+
+.pane{
+	-fx-background-color:#000428;  /* fallback for old browsers */
+	-fx-background-color:  linear-gradient(to right, #004e92, #000428);  
+	-fx-background-color:linear-gradient(to right, #004e92, #000428); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.PaneStyle1{
+	-fx-background-color: #141E30;  /* fallback for old browsers */
+	-fx-background-color: linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+	-fx-background-color: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */	
+}
+
+.SpaceStyle1{
+	-fx-background-color: #2C3E50;  /* fallback for old browsers */
+	-fx-background-color: linear-gradient(to right, #4CA1AF, #2C3E50);  /* Chrome 10-25, Safari 5.1-6 */
+	-fx-background-color: linear-gradient(to right, #4CA1AF, #2C3E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.PaneSpace{
+	-fx-background-color: #000000;  /* fallback for old browsers */
+	-fx-background-color: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+	-fx-background-color: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}

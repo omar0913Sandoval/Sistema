@@ -1,0 +1,832 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXScrollPane?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox fx:id="content_area" prefHeight="885.0" prefWidth="1365.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ni.edu.uni.Clinica.Controller.FXMLGestionPacienteController">
+   <children>
+      <HBox prefHeight="46.0" prefWidth="1338.0" spacing="4.0">
+         <children>
+            <ImageView fitHeight="43.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/cough.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="10.0" top="5.0" />
+               </HBox.margin>
+            </ImageView>
+            <Line endX="-99.37867736816406" endY="51.29289245605469" fill="BLACK" startX="-99.37869262695312" startY="90.58578491210938">
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin>
+            </Line>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion Paciente" wrappingWidth="192.9830665588379">
+               <font>
+                  <Font size="23.0" />
+               </font>
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+            </Text>
+         </children>
+      </HBox>
+      <TabPane prefHeight="200.0" prefWidth="200.0" stylesheets="@../Style/Style%20TabPaneGestionPaciente.css" tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
+        <tabs>
+            <Tab text="Visitas Medicas">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox layoutX="118.0" layoutY="139.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <HBox prefHeight="20.0" prefWidth="1350.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <VBox prefHeight="100.0" prefWidth="168.0">
+                                       <children>
+                                          <Label text="Fecha:">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXDatePicker defaultColor="#2d75e8" promptText="DD/MM/AA" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="100.0" prefWidth="170.0">
+                                       <children>
+                                          <Label text="Hora:">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXTimePicker defaultColor="#2d75e8" promptText="HH:MM:SS" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="80.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="15.0" top="15.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox prefHeight="4.0" prefWidth="1350.0" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets left="15.0" top="15.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <VBox prefHeight="147.0" prefWidth="1350.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Label text="Tipo de Visita Medica:">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <HBox prefHeight="100.0" prefWidth="200.0" spacing="80.0" VBox.vgrow="ALWAYS">
+                                             <children>
+                                                <JFXCheckBox checkedColor="#2d75e8" text="Examenes Rutinarios" unCheckedColor="#2a2e37" wrapText="true">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </JFXCheckBox>
+                                                <JFXCheckBox checkedColor="#2d75e8" text="Gestion de los Medicamentos" unCheckedColor="#2a2e37" wrapText="true">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </JFXCheckBox>
+                                                <JFXCheckBox checkedColor="#2d75e8" text="Tratamiento de Salud Mental" unCheckedColor="#2a2e37" wrapText="true">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </JFXCheckBox>
+                                                <JFXCheckBox checkedColor="#2d75e8" text="Tratamiento y Prevencion" unCheckedColor="#2a2e37" wrapText="true">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </JFXCheckBox>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets top="10.0" />
+                                             </VBox.margin>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="241.0" prefWidth="1323.0">
+                                 <children>
+                                    <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Label prefHeight="31.0" prefWidth="314.0" text="Descripcion u Anotaciones sobre la Visita:">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXTextArea prefHeight="220.0" prefWidth="1296.0" promptText="Observaciones  sobre la Visita Medica" VBox.vgrow="ALWAYS">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets right="57.0" />
+                                             </VBox.margin>
+                                          </JFXTextArea>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="15.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Label text="Nombre Paciente:">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXTextField>
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </JFXTextField>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Label text="Clinica:">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXTextField promptText="Nombre de la Clinica">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </JFXTextField>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Label text="Doctor:">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXComboBox fx:id="cmb_MedicoVisitaMedica" prefHeight="33.0" prefWidth="304.0" promptText="Seleccione un Medico" VBox.vgrow="ALWAYS" />
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <JFXButton buttonType="RAISED" prefHeight="58.0" prefWidth="203.0" style="-fx-background-color: #2A2E37;" text="Guardar Datos" textFill="WHITE">
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </JFXButton>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="15.0" top="70.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+              </content>
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/Visita%20Medica.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Tab>
+          <Tab text="Examenes de laboratorio">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefHeight="703.0" prefWidth="1308.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <HBox prefHeight="28.0" prefWidth="1350.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <VBox prefHeight="100.0" prefWidth="168.0">
+                                       <children>
+                                          <Label text="Fecha:">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXDatePicker defaultColor="#2d75e8" promptText="DD/MM/AA" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="100.0" prefWidth="170.0">
+                                       <children>
+                                          <Label text="Hora:">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXTimePicker defaultColor="#2d75e8" promptText="HH:MM:SS" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="80.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="15.0" top="20.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox prefHeight="83.0" prefWidth="1323.0" spacing="20.0" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets left="15.0" top="40.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <VBox prefHeight="158.0" prefWidth="207.0">
+                                       <children>
+                                          <Label text="Temperatura:">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXTextField promptText="Grados Centigrados">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </JFXTextField>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="159.0" prefWidth="207.0" HBox.hgrow="NEVER">
+                                       <children>
+                                          <Label text="Peso:">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXTextField promptText="KiloGramos">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </JFXTextField>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="159.0" prefWidth="207.0">
+                                       <children>
+                                          <Label text="Altura:">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXTextField promptText="Centimetros">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </JFXTextField>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="159.0" prefWidth="207.0">
+                                       <children>
+                                          <Label text="Tipo de Examen:">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXComboBox fx:id="cmb_TipoDeExamen_ExamenesDeLaboratorio" prefHeight="25.0" prefWidth="243.0" promptText="Seleccione un Tipo de Examen" VBox.vgrow="ALWAYS">
+                                             <VBox.margin>
+                                                <Insets top="6.0" />
+                                             </VBox.margin>
+                                          </JFXComboBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="149.0" prefWidth="1323.0" spacing="20.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <VBox prefHeight="158.0" prefWidth="207.0">
+                                       <children>
+                                          <Label text="Sintomas:">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <TextArea prefHeight="200.0" prefWidth="213.0" promptText="Descripcion breve sobre los sintomas del Paciente">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font></TextArea>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="159.0" prefWidth="207.0" HBox.hgrow="NEVER">
+                                       <children>
+                                          <Label text="Diagnosticos:">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <TextArea prefHeight="200.0" prefWidth="200.0" promptText="Descripcion breve sobre los Diagnosticos del Medico">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font></TextArea>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="173.0" prefWidth="746.0">
+                                       <children>
+                                          <Label text="Resultados:">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <TextArea prefHeight="200.0" prefWidth="200.0" promptText="Resultados del Examen de La boratorio">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font></TextArea>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="15.0" top="40.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="142.0" prefWidth="1323.0" spacing="20.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Label text="Nombre Paciente:">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXTextField>
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </JFXTextField>
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Label text="Clinica:">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXTextField>
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </JFXTextField>
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Label text="Doctor:">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXComboBox fx:id="cmb_MedicoExamenesDeLaboratotrio" prefHeight="25.0" prefWidth="342.0" promptText="Seleccione un Medico" VBox.vgrow="ALWAYS" />
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <JFXButton buttonType="RAISED" prefHeight="58.0" prefWidth="203.0" style="-fx-background-color: #2A2E37;" text="Guardar Datos" textFill="WHITE">
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </JFXButton>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="15.0" top="40.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children></AnchorPane>
+            </content>
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/test-tubes.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+          </Tab>
+          <Tab text="Cirugias">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefHeight="703.0" prefWidth="1308.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <HBox prefHeight="46.0" prefWidth="1350.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <VBox prefHeight="100.0" prefWidth="168.0">
+                                       <children>
+                                          <Label text="Fecha:">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXDatePicker defaultColor="#2d75e8" promptText="DD/MM/AA" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="100.0" prefWidth="170.0">
+                                       <children>
+                                          <Label text="Hora:">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXTimePicker defaultColor="#2d75e8" promptText="HH:MM:SS" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="80.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="15.0" top="20.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox prefHeight="83.0" prefWidth="1323.0" spacing="20.0" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets left="15.0" top="40.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <VBox prefHeight="107.0" prefWidth="361.0">
+                                       <children>
+                                          <Label text="Titulo de la Cirujia:">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXComboBox fx:id="cmb_TipoDeCirugia" prefHeight="42.0" prefWidth="358.0" promptText="Seleccione un Tipo de Cirujga" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="204.0" prefWidth="1323.0" spacing="20.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <VBox prefHeight="211.0" prefWidth="764.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Label text="Detalles sobre la Cirugia">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <TextArea prefHeight="200.0" prefWidth="200.0" promptText="Describa si hubo incovenientes durante la cirugia">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font></TextArea>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets right="56.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="15.0" top="40.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="142.0" prefWidth="1323.0" spacing="20.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Label text="Nombre Paciente:">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXTextField>
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </JFXTextField>
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Label text="Clinica:">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXTextField>
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </JFXTextField>
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Label text="Doctor:">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXComboBox fx:id="cmb_Medico_Cirugias" prefHeight="31.0" prefWidth="320.0" promptText="Seleccione un Medico" />
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <JFXButton fx:id="btn_GuardarCirugias" buttonType="RAISED" onAction="#EventGuardarDatosCirugia" prefHeight="58.0" prefWidth="203.0" style="-fx-background-color: #2A2E37;" text="Guardar Datos" textFill="WHITE">
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </JFXButton>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="15.0" top="40.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children></AnchorPane>
+            </content>
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/surgery.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+          </Tab>
+            <Tab text="Receta o Prescripcion Medica">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <JFXScrollPane style="-fx-background-color: #fff;" stylesheets="@../Style/StyleScrollPane.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #fff;">
+                                 <children>
+                                    <VBox prefHeight="157.0" prefWidth="1338.0">
+                                       <children>
+                                          <HBox prefHeight="147.0" prefWidth="1338.0" style="-fx-background-color: #2D75E8;">
+                                             <children>
+                                                <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #9B9694;" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #F2F2F2;" VBox.vgrow="ALWAYS">
+                                                         <children>
+                                                            <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #F2F2F2;" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <Label prefHeight="71.0" prefWidth="1023.0" text="Clinica Monte los Olivos">
+                                                                     <font>
+                                                                        <Font name="Microsoft JhengHei UI Light" size="56.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                                  <Label prefHeight="26.0" prefWidth="581.0" text="Los Robles #8, costado sur funeraria Monte Los Olivos 2 1/2c al Este, 14009">
+                                                                     <font>
+                                                                        <Font size="17.0" />
+                                                                     </font>
+                                                                     <VBox.margin>
+                                                                        <Insets left="5.0" />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                                  <Label prefHeight="26.0" prefWidth="581.0" text="DPH. Omar Josue Sandoval Maldonado">
+                                                                     <font>
+                                                                        <Font size="17.0" />
+                                                                     </font>
+                                                                     <VBox.margin>
+                                                                        <Insets left="5.0" />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                               </children>
+                                                            </VBox>
+                                                            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                                               <children>
+                                                                  <ImageView fitHeight="118.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@../Icons/hospital%20(1).png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                               </children>
+                                                            </HBox>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                   <HBox.margin>
+                                                      <Insets left="15.0" />
+                                                   </HBox.margin>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                          <Separator prefHeight="6.0" prefWidth="1338.0" style="-fx-background-color: #2D75E8;" />
+                                       </children>
+                                    </VBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="93.0" prefWidth="1308.0" spacing="20.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <VBox alignment="CENTER_LEFT" prefHeight="142.0" prefWidth="239.0">
+                                             <children>
+                                                <Label text="Nombre Paciente:">
+                                                   <font>
+                                                      <Font name="System Bold" size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <JFXTextField>
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </JFXTextField>
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="CENTER_LEFT" prefHeight="82.0" prefWidth="99.0">
+                                             <children>
+                                                <Label text="Sexo:">
+                                                   <font>
+                                                      <Font name="System Bold" size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <JFXTextField>
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </JFXTextField>
+                                             </children>
+                                          </VBox>
+                                          <HBox prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                                          <VBox alignment="CENTER_LEFT" prefHeight="142.0" prefWidth="135.0">
+                                             <children>
+                                                <Label text="Fecha:">
+                                                   <font>
+                                                      <Font name="System Bold" size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <JFXDatePicker defaultColor="#2d75e8" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox prefHeight="124.0" prefWidth="1365.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <Label text="Sintomas">
+                                                   <font>
+                                                      <Font name="System Bold" size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextArea prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets left="15.0" right="15.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="142.0" prefWidth="1365.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <VBox prefHeight="157.0" prefWidth="1335.0" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <Label text="Diagnostico:">
+                                                   <font>
+                                                      <Font name="System Bold" size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextArea prefHeight="126.0" prefWidth="1335.0" VBox.vgrow="ALWAYS" />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets left="15.0" right="15.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="131.0" prefWidth="1365.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <Label text="Medicamento">
+                                                   <font>
+                                                      <Font name="System Bold" size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextArea prefHeight="200.0" prefWidth="200.0" />
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" left="15.0" right="15.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="131.0" prefWidth="1365.0" spacing="300.0" VBox.vgrow="ALWAYS">
+                                       <padding>
+                                          <Insets left="15.0" right="15.0" />
+                                       </padding>
+                                       <children>
+                                          <VBox alignment="CENTER_LEFT" prefHeight="130.0" prefWidth="227.0">
+                                             <children>
+                                                <Label text="Firma del Doctor:">
+                                                   <font>
+                                                      <Font name="System Bold" size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <JFXTextField VBox.vgrow="ALWAYS">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </JFXTextField>
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="CENTER_LEFT" prefHeight="130.0" prefWidth="227.0">
+                                             <children>
+                                                <Label text="Cello del Doctor u Clinica:">
+                                                   <font>
+                                                      <Font name="System Bold" size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <JFXTextField VBox.vgrow="ALWAYS">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </JFXTextField>
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets left="40.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_RIGHT" prefHeight="71.0" prefWidth="1365.0">
+                                       <padding>
+                                          <Insets left="15.0" right="15.0" />
+                                       </padding>
+                                       <children>
+                                          <VBox alignment="CENTER" prefHeight="98.0" prefWidth="169.0">
+                                             <children>
+                                                <JFXButton buttonType="RAISED" prefHeight="40.0" prefWidth="136.0" style="-fx-background-color: #2A2E37;" text="Exportar Datos" textFill="WHITE">
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="15.0" />
+                                                   </font>
+                                                </JFXButton>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </JFXScrollPane>
+                     </children></AnchorPane>
+              </content>
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Icons/newspaper.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Tab>
+        </tabs>
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </TabPane>
+   </children>
+</VBox>

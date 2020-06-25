@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox fx:id="content_area" prefHeight="792.0" prefWidth="1338.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ni.edu.uni.Clinica.Controller.FXMLHomeController">
+   <children>
+      <BorderPane prefHeight="104.0" prefWidth="1338.0">
+         <center>
+            <GridPane hgap="15.0" prefHeight="103.0" prefWidth="869.0" BorderPane.alignment="CENTER">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Pane prefHeight="103.0" prefWidth="200.0" style="-fx-background-color: #3A84C3; -fx-background-radius: 1em;">
+                     <children>
+                        <Text fx:id="lblNumeroDePacientes1" fill="WHITE" layoutX="94.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="500">
+                           <font>
+                              <Font name="System Bold" size="36.0" />
+                           </font>
+                        </Text>
+                        <Text fill="WHITE" layoutX="94.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Medicos">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Text>
+                        <ImageView fitHeight="62.0" fitWidth="63.0" layoutX="14.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Icons/Pacientes.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </Pane>
+                  <Pane prefHeight="103.0" prefWidth="200.0" style="-fx-background-color: #f0a500; -fx-background-radius: 1em;" GridPane.columnIndex="1">
+                     <children>
+                        <Text fx:id="lblNumeroPacientesAtendidos1" fill="WHITE" layoutX="94.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100">
+                           <font>
+                              <Font name="System Bold" size="36.0" />
+                           </font>
+                        </Text>
+                        <Text fill="WHITE" layoutX="94.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Consultas">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Text>
+                        <ImageView fitHeight="62.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true" x="26.0" y="23.0">
+                           <image>
+                              <Image url="@../Icons/Lista%20Paciente.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="103.0" prefWidth="200.0" style="-fx-background-color: #5CB55B; -fx-background-radius: 1em;" GridPane.columnIndex="2">
+                     <children>
+                        <Text fx:id="lblNumeroPacientesAtendidos21" fill="WHITE" layoutX="94.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100">
+                           <font>
+                              <Font name="System Bold" size="36.0" />
+                           </font>
+                        </Text>
+                        <Text fill="WHITE" layoutX="94.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pacientes">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Text>
+                        <ImageView fitHeight="62.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true" x="26.0" y="23.0">
+                           <image>
+                              <Image url="@../Icons/UsuarioHome.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="103.0" prefWidth="200.0" style="-fx-background-color: #D7534E; -fx-background-radius: 1em;" GridPane.columnIndex="3">
+                     <children>
+                        <Text fx:id="lblNumeroPacientesAtendidos11" fill="WHITE" layoutX="94.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100">
+                           <font>
+                              <Font name="System Bold" size="36.0" />
+                           </font>
+                        </Text>
+                        <Text fill="WHITE" layoutX="94.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Citas">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Text>
+                        <ImageView fitHeight="62.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true" x="26.0" y="23.0">
+                           <image>
+                              <Image url="@../Icons/CampanaHome.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <GridPane.margin>
+                        <Insets right="20.0" />
+                     </GridPane.margin>
+                  </Pane>
+               </children>
+            </GridPane>
+         </center>
+         <VBox.margin>
+            <Insets top="40.0" />
+         </VBox.margin>
+      </BorderPane>
+      <SplitPane dividerPositions="0.6813271604938271" prefHeight="493.0" prefWidth="1338.0" style="-fx-background-color: #ffffff;" VBox.vgrow="ALWAYS">
+         <items>
+            <BorderPane prefHeight="200.0" prefWidth="200.0">
+               <center>
+                  <GridPane style="-fx-background-color: #fff;" BorderPane.alignment="CENTER">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <TableView fx:id="Tbl_UltimosRegistros" prefHeight="349.0" prefWidth="1066.0" stylesheets="@../Style/StyleTable.css" tableMenuButtonVisible="true">
+                           <columns>
+                              <TableColumn fx:id="Column_Identificador" prefWidth="98.0" text="#Identificador" />
+                              <TableColumn fx:id="Column_Nombre" prefWidth="198.0" text="Nombre" />
+                              <TableColumn fx:id="Column_Telefono" prefWidth="251.0" text="Especialidad" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                           <opaqueInsets>
+                              <Insets left="20.0" right="20.0" />
+                           </opaqueInsets>
+                        </TableView>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets />
+                     </BorderPane.margin>
+                  </GridPane>
+               </center>
+            </BorderPane>
+            <BorderPane prefHeight="200.0" prefWidth="200.0">
+               <center>
+                  <GridPane style="-fx-background-color: #fff;" BorderPane.alignment="CENTER">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <SplitPane dividerPositions="0.41134751773049644" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
+                          <items>
+                              <ListView fx:id="list_ListaDeCitas" editable="true" prefHeight="247.0" prefWidth="407.0" />
+                              <BarChart fx:id="BBarchart">
+                                <xAxis>
+                                  <CategoryAxis fx:id="Meses" label="Meses" side="BOTTOM" />
+                                </xAxis>
+                                <yAxis>
+                                  <NumberAxis fx:id="Ingresos" label="Ingresos" side="LEFT" />
+                                </yAxis>
+                              </BarChart>
+                          </items>
+                        </SplitPane>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets />
+                     </BorderPane.margin>
+                  </GridPane>
+               </center>
+               <top>
+                  <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="409.0" style="-fx-background-color: #2A2E37;" BorderPane.alignment="CENTER">
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Citas de Hoy" wrappingWidth="281.51513671875">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="14.0" />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                  </HBox>
+               </top>
+            </BorderPane>
+         </items>
+         <VBox.margin>
+            <Insets bottom="10.0" left="20.0" right="20.0" top="30.0" />
+         </VBox.margin>
+      </SplitPane>
+   </children>
+</VBox>
