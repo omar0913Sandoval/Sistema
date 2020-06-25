@@ -20,7 +20,7 @@ public class App extends Application{
 	@Override
 	public void start(Stage stage) throws Exception {
 		FXMLLoader loader = new FXMLLoader();
-		Parent root = loader.load(getClass().getResource("/ni/edu/uni/Clinica/Vista/FXMLGestionCitas.fxml"));
+		Parent root = loader.load(getClass().getResource("/ni/edu/uni/Clinica/Vista/FXMLMenuBorderPane.fxml"));
 		Scene scena = new Scene(root);
 		stage.setScene(scena);
 		stage.show();

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Clinica.jnlp">
+  <information>
+    <title>Clinica</title>
+    <vendor>Lenovo</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="Clinica.jar" size="16505353" download="eager" />
+    <jar href="lib\DS_Desktop_Notify.jar" size="45146" download="eager" />
+    <jar href="lib\fontawesomefx-8.1.jar" size="179086" download="eager" />
+    <jar href="lib\gson-2.8.2.jar" size="232932" download="eager" />
+    <jar href="lib\jfoenix-8.0.10.jar" size="2710207" download="eager" />
+    <jar href="lib\jxl.jar" size="725735" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="800" height="600" main-class="prueba.Prueba"  name="Clinica" />
+  <update check="always"/>
+</jnlp>

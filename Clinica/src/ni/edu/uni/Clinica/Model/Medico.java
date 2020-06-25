@@ -6,8 +6,11 @@
 package ni.edu.uni.Clinica.Model;
 
 import java.io.Serializable;
+import java.sql.CallableStatement;
+import java.sql.Connection;
 import java.util.Objects;
 import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 
 /**
  *
@@ -15,189 +18,202 @@ import javafx.beans.property.SimpleStringProperty;
  */
 public class Medico implements Serializable{
 	
-	private SimpleStringProperty id_Medico;
-	private SimpleStringProperty cedula;
-	private SimpleStringProperty primerNombre;
-	private SimpleStringProperty segundoNombre;
-	private SimpleStringProperty PrimeApellido;
-	private SimpleStringProperty SegundoApellido;
-	private SimpleStringProperty telefono;
-	private SimpleStringProperty direccion;
-	private SimpleStringProperty correo;
-	private SimpleStringProperty imageURL;
+	private StringProperty id_Medico;
+	private StringProperty cedula;
+	private StringProperty primerNombre;
+	private StringProperty segundoNombre;
+	private StringProperty PrimeApellido;
+	private StringProperty SegundoApellido;
+	private StringProperty telefono;
+	private StringProperty direccion;
+	private StringProperty correo;
+	private StringProperty imageURL;
+        private StringProperty estado;
+        
+        
+        public Medico(String cedula, String primerNombre, String segundoNombre, String PrimeApellido, String SegundoApellido, String telefono, String direccion, String correo, String imageURL, String estado) {
+	this.cedula = new SimpleStringProperty(cedula);
+	this.primerNombre = new SimpleStringProperty(primerNombre);
+	this.segundoNombre = new SimpleStringProperty(segundoNombre);
+	this.PrimeApellido = new SimpleStringProperty(PrimeApellido);
+	this.SegundoApellido = new SimpleStringProperty(SegundoApellido);
+	this.telefono = new SimpleStringProperty(telefono);
+	this.direccion = new SimpleStringProperty(direccion);
+        this.correo = new SimpleStringProperty(correo);
+	this.imageURL = new SimpleStringProperty(imageURL);
+        
+        }
+ 
+	public Medico(String cedula, String primerNombre, String segundoNombre, String PrimeApellido, String SegundoApellido, String telefono, String direccion, String correo, String imageURL) {
+	this.cedula = new SimpleStringProperty(cedula);
+	this.primerNombre = new SimpleStringProperty(primerNombre);
+	this.segundoNombre = new SimpleStringProperty(segundoNombre);
+	this.PrimeApellido = new SimpleStringProperty(PrimeApellido);
+	this.SegundoApellido = new SimpleStringProperty(SegundoApellido);
+	this.telefono = new SimpleStringProperty(telefono);
+	this.direccion = new SimpleStringProperty(direccion);
+	this.correo = new SimpleStringProperty(correo);
+	this.imageURL = new SimpleStringProperty(imageURL);
+        }
+                     
+        /*Get y set con property*/        
 
-	public Medico() {
-	
-	}
+        public StringProperty Id_MedicoProperty() {
+            return id_Medico;
+        }
 
-	public Medico(String id_Medico, String cedula, String primerNombre, String segundoNombre, String PrimeApellido, String SegundoApellido, String telefono, String direccion, String correo, String imageURL) {
-		this.id_Medico = new SimpleStringProperty(id_Medico);
-		this.cedula = new SimpleStringProperty(cedula);
-		this.primerNombre = new SimpleStringProperty(primerNombre);
-		this.segundoNombre = new SimpleStringProperty(segundoNombre);
-		this.PrimeApellido = new SimpleStringProperty(PrimeApellido);
-		this.SegundoApellido = new SimpleStringProperty(SegundoApellido);
-		this.telefono = new SimpleStringProperty(telefono);
-		this.direccion = new SimpleStringProperty(direccion);
-		this.correo = new SimpleStringProperty(correo);
-		this.imageURL = new SimpleStringProperty(imageURL);
-	}
-	
-		public Medico(String cedula, String primerNombre, String segundoNombre, String PrimeApellido, String SegundoApellido, String telefono, String direccion, String correo, String imageURL) {
-		this.cedula = new SimpleStringProperty(cedula);
-		this.primerNombre = new SimpleStringProperty(primerNombre);
-		this.segundoNombre = new SimpleStringProperty(segundoNombre);
-		this.PrimeApellido = new SimpleStringProperty(PrimeApellido);
-		this.SegundoApellido = new SimpleStringProperty(SegundoApellido);
-		this.telefono = new SimpleStringProperty(telefono);
-		this.direccion = new SimpleStringProperty(direccion);
-		this.correo = new SimpleStringProperty(correo);
-		this.imageURL = new SimpleStringProperty(imageURL);
-	}
+        public void setId_Medico(StringProperty id_Medico) {
+            this.id_Medico = id_Medico;
+        }
 
-	public SimpleStringProperty getId_Medico() {
-		return id_Medico;
-	}
+        public StringProperty CedulaProperty() {
+            return cedula;
+        }
 
-	public void setId_Medico(SimpleStringProperty id_Medico) {
-		this.id_Medico = id_Medico;
-	}
+        public void setCedula(StringProperty cedula) {
+            this.cedula = cedula;
+        }
 
-	public SimpleStringProperty getCedula() {
-		return cedula;
-	}
+        public StringProperty PrimerNombreProperty() {
+            return primerNombre;
+        }
 
-	public void setCedula(SimpleStringProperty cedula) {
-		this.cedula = cedula;
-	}
+        public void setPrimerNombre(StringProperty primerNombre) {
+            this.primerNombre = primerNombre;
+        }
 
-	public SimpleStringProperty getPrimerNombre() {
-		return primerNombre;
-	}
+        public StringProperty SegundoNombreProperty() {
+            return segundoNombre;
+        }
 
-	public void setPrimerNombre(SimpleStringProperty primerNombre) {
-		this.primerNombre = primerNombre;
-	}
+        public void setSegundoNombre(StringProperty segundoNombre) {
+            this.segundoNombre = segundoNombre;
+        }
 
-	public SimpleStringProperty getSegundoNombre() {
-		return segundoNombre;
-	}
+        public StringProperty PrimeApellidoProperty() {
+            return PrimeApellido;
+        }
 
-	public void setSegundoNombre(SimpleStringProperty segundoNombre) {
-		this.segundoNombre = segundoNombre;
-	}
+        public void setPrimeApellido(StringProperty PrimeApellido) {
+            this.PrimeApellido = PrimeApellido;
+        }
 
-	public SimpleStringProperty getPrimeApellido() {
-		return PrimeApellido;
-	}
+        public StringProperty SegundoApellidoProperty() {
+            return SegundoApellido;
+        }
 
-	public void setPrimeApellido(SimpleStringProperty PrimeApellido) {
-		this.PrimeApellido = PrimeApellido;
-	}
+        public void setSegundoApellido(StringProperty SegundoApellido) {
+            this.SegundoApellido = SegundoApellido;
+        }
 
-	public SimpleStringProperty getSegundoApellido() {
-		return SegundoApellido;
-	}
+        public StringProperty TelefonoProperty() {
+            return telefono;
+        }
 
-	public void setSegundoApellido(SimpleStringProperty SegundoApellido) {
-		this.SegundoApellido = SegundoApellido;
-	}
+        public void setTelefono(StringProperty telefono) {
+            this.telefono = telefono;
+        }
 
-	public SimpleStringProperty getTelefono() {
-		return telefono;
-	}
+        public StringProperty DireccionProperty() {
+            return direccion;
+        }
 
-	public void setTelefono(SimpleStringProperty telefono) {
-		this.telefono = telefono;
-	}
+        public void setDireccion(StringProperty direccion) {
+            this.direccion = direccion;
+        }
 
-	public SimpleStringProperty getDireccion() {
-		return direccion;
-	}
+        public StringProperty CorreoProperty() {
+            return correo;
+        }
 
-	public void setDireccion(SimpleStringProperty direccion) {
-		this.direccion = direccion;
-	}
+        public void setCorreo(StringProperty correo) {
+            this.correo = correo;
+        }
 
-	public SimpleStringProperty getCorreo() {
-		return correo;
-	}
+        public StringProperty ImageURLProperty() {
+            return imageURL;
+        }
 
-	public void setCorreo(SimpleStringProperty correo) {
-		this.correo = correo;
-	}
+        public void setImageURL(StringProperty imageURL) {
+            this.imageURL = imageURL;
+        }
 
-	public SimpleStringProperty getImageURL() {
-		return imageURL;
-	}
+        public StringProperty EstadoProperty() {
+            return estado;
+        }
 
-	public void setImageURL(SimpleStringProperty imageURL) {
-		this.imageURL = imageURL;
-	}
+        public void setEstado(StringProperty estado) {
+            this.estado = estado;
+        }
 
-	@Override
-	public int hashCode() {
-		int hash = 3;
-		hash = 97 * hash + Objects.hashCode(this.id_Medico);
-		hash = 97 * hash + Objects.hashCode(this.cedula);
-		hash = 97 * hash + Objects.hashCode(this.primerNombre);
-		hash = 97 * hash + Objects.hashCode(this.segundoNombre);
-		hash = 97 * hash + Objects.hashCode(this.PrimeApellido);
-		hash = 97 * hash + Objects.hashCode(this.SegundoApellido);
-		hash = 97 * hash + Objects.hashCode(this.telefono);
-		hash = 97 * hash + Objects.hashCode(this.direccion);
-		hash = 97 * hash + Objects.hashCode(this.correo);
-		hash = 97 * hash + Objects.hashCode(this.imageURL);
-		return hash;
-	}
+        /*Get normales*/
 
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj) {
-			return true;
-		}
-		if (obj == null) {
-			return false;
-		}
-		if (getClass() != obj.getClass()) {
-			return false;
-		}
-		final Medico other = (Medico) obj;
-		if (!Objects.equals(this.id_Medico, other.id_Medico)) {
-			return false;
-		}
-		if (!Objects.equals(this.cedula, other.cedula)) {
-			return false;
-		}
-		if (!Objects.equals(this.primerNombre, other.primerNombre)) {
-			return false;
-		}
-		if (!Objects.equals(this.segundoNombre, other.segundoNombre)) {
-			return false;
-		}
-		if (!Objects.equals(this.PrimeApellido, other.PrimeApellido)) {
-			return false;
-		}
-		if (!Objects.equals(this.SegundoApellido, other.SegundoApellido)) {
-			return false;
-		}
-		if (!Objects.equals(this.telefono, other.telefono)) {
-			return false;
-		}
-		if (!Objects.equals(this.direccion, other.direccion)) {
-			return false;
-		}
-		if (!Objects.equals(this.correo, other.correo)) {
-			return false;
-		}
-		if (!Objects.equals(this.imageURL, other.imageURL)) {
-			return false;
-		}
-		return true;
-	}
+        public String getId_Medico() {
+            return id_Medico.get();
+        }
 
-	@Override
-	public String toString() {
-		return "Medico{" + "id_Medico=" + id_Medico + ", cedula=" + cedula + ", primerNombre=" + primerNombre + ", segundoNombre=" + segundoNombre + ", PrimeApellido=" + PrimeApellido + ", SegundoApellido=" + SegundoApellido + ", telefono=" + telefono + ", direccion=" + direccion + ", correo=" + correo + ", imageURL=" + imageURL + '}';
-	}
+        public String getCedula() {
+            return cedula.get();
+        }
+
+        public String getPrimerNombre() {
+            return primerNombre.get();
+        }
+
+        public String getSegundoNombre() {
+            return segundoNombre.get();
+        }
+
+        public String getPrimeApellido() {
+            return PrimeApellido.get();
+        }
+
+        public String getSegundoApellido() {
+            return SegundoApellido.get();
+        }
+
+        public String getTelefono() {
+            return telefono.get();
+        }
+
+        public String getDireccion() {
+            return direccion.get();
+        }
+
+        public String getCorreo() {
+            return correo.get();
+        }
+
+        public String getImageURL() {
+            return imageURL.get();
+        }
+
+        public String getEstado() {
+            return estado.get();
+        }
+        
+        
+
+            //Metodo para ingresar cliente a la base de datos
+        public void IngresarCliente(Medico m) throws  Exception
+        {
+            Conexion c = new Conexion();
+            
+            try (Connection conn = c.getConnection()) {
+                CallableStatement cs=conn.prepareCall("{call add_Paciente_Doctor(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)}");
+                cs.setString(1, "medico");
+                cs.setString(2,m.getCedula());
+                cs.setString(3,m.getPrimerNombre());
+                cs.setString(4,m.getSegundoNombre());
+                cs.setString(5,m.getPrimeApellido());
+                cs.setString(6,m.getSegundoApellido());
+                cs.setString(7,m.getDireccion());
+                cs.setString(8,m.getTelefono());
+                cs.setString(9,m.getCorreo());
+                cs.setString(10,m.getImageURL()); 
+                cs.execute();
+                
+                c.cerrarConexion();
+            }catch(Exception e){System.out.println(e);}
+        }
 }
